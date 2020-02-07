@@ -1,5 +1,7 @@
 package com.vss.springpetclinic.controllers;
 
+import com.vss.springpetclinic.services.VetService;
+import com.vss.springpetclinic.services.map.VetServiceMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
