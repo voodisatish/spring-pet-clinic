@@ -15,11 +15,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
-
 
     @Override
     public void run(String... args) throws Exception {
@@ -48,8 +47,8 @@ public class DataLoader implements CommandLineRunner {
 
         Vet vet2 = new Vet();
         vet2.setId(2L);
-        vet2.setFirstName("Rama Krishna");
-        vet2.setLastName("Konidella");
+        vet2.setFirstName("Venu");
+        vet2.setLastName("Allu");
 
         vetService.save(vet2);
 
